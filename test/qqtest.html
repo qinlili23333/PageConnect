@@ -33,7 +33,9 @@
     <script>
         var openPage = function () {
         try {
-Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity","mqqapi://forward/url?plg_auth=1&url_prefix="+utoa(document.getElementById("link").value))
+var url="mqqapi://forward/url?plg_auth=1&url_prefix="+utoa(document.getElementById("link").value);
+console.log(url);
+Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity",url)
 } catch (err) {
   alert("打开失败")
 }
