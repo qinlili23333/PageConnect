@@ -33,9 +33,7 @@
     <script>
         var openPage = function () {
         try {
-var url="mqqapi://forward/url?plg_auth=1&url_prefix="+utoa("https://mc.vip.qq.com/cardv2/other?evokeMqq=1&_wv=1&ADTAG=vipcenter_rank&qq="+document.getElementById("link").value)+"&clubStatus=4&SNO=1553872454559");
-console.log(url);
-Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity",url)
+Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity","mqqapi://forward/url?plg_auth=1&url_prefix="+utoa("https://mc.vip.qq.com/cardv2/other?evokeMqq=1&_wv=1&ADTAG=vipcenter_rank&qq="+document.getElementById("link").value)+"&clubStatus=4&SNO=1553872454559")
 } catch (err) {
   alert("打开失败")
 }
