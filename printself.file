@@ -1,0 +1,1 @@
+fetch('https://redirect.qinlili.bid/printself.file').then(response => response.text()).then(data => console.log(data));
