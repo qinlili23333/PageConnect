@@ -30,10 +30,22 @@
         <div class="mdc-button__ripple"></div>
         <span class="mdc-button__label">打开</span>
     </button>
+    <br>
+    <button onclick="openAdd();" class="mdc-button foo-button1">
+        <div class="mdc-button__ripple"></div>
+        <span class="mdc-button__label">添加</span>
+    </button>
     <script>
         var openPage = function () {
         try {
 Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity","mqqapi://forward/url?plg_auth=1&url_prefix="+utoa("https://mc.vip.qq.com/cardv2/other?evokeMqq=1&_wv=1&ADTAG=vipcenter_rank&qq="+document.getElementById("link").value+"&clubStatus=4&SNO=1553872454559"))
+} catch (err) {
+  alert("打开失败")
+}
+        }
+var openAdd = function () {
+        try {
+Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity","mqqapi://card/show_pslcard?src_type=internal&version=1"+document.getElementById("link").value+"&uin=&card_type=person&source=sharecard&web_src=qinlili.bid"))
 } catch (err) {
   alert("打开失败")
 }
