@@ -45,7 +45,7 @@ Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activi
         }
 var openAdd = function () {
         try {
-Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity","mqqapi://card/show_pslcard?src_type=internal&version=1"+document.getElementById("link").value+"&uin=&card_type=person&source=sharecard&web_src=qinlili.bid")
+Kiyomi.jsCallActivityWithUrl("com.tencent.mobileqq","com.tencent.mobileqq.activity.JumpActivity","mqqapi://card/show_pslcard?src_type=internal&version=1&uin="+document.getElementById("link").value+"&card_type=person&source=sharecard&web_src=qinlili.bid")
 } catch (err) {
   alert("打开失败")
 }
